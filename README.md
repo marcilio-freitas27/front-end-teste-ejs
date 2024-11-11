@@ -26,8 +26,8 @@ Neste projeto foi usada a versão 20.15.0
 1. **Clone o repositório**:
 
    ```bash
-   git clone https://github.com/seu-usuario/express-ejs-app.git
-   cd express-ejs-app
+   git clone https://github.com/marcilio-freitas27/front-end-teste-ejs.git
+   cd front-end-teste-ejs
 
 2. **Instale as dependências**:
 
