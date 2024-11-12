@@ -7,7 +7,9 @@ const indexRoute = require('./routes/index');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-app.use('/', indexRoute);
+router.get('/', (req, res) => {
+  res.render('index');
+});
 
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
