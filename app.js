@@ -7,7 +7,7 @@ const indexRoute = require('./routes/index');
 
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-router.get('/', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
