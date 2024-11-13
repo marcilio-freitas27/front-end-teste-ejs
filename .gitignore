@@ -132,3 +132,4 @@ dist
 # package
 package-lock.json
 .vercel
+routes/
