@@ -1,0 +1,193 @@
+:root {
+  /* Color variables */
+  --primary-bg-color: #f2f2f2;
+  --main-bg-color: #ffffff;
+  --sidebar-bg-color: #2596be;
+  --item-bg-color: #145369;
+  --circle-bg-color: #041014;
+  --scrollbar-track-color: #f1f1f1;
+  --scrollbar-thumb-color: #888;
+  --scrollbar-thumb-hover-color: #555;
+  
+  /* Text color variables */
+  --text-color-white: #ffffff;
+  --text-color-dark: #041014;
+  
+  /* Size variables */
+  --main-width: 80%;
+  --main-height: 80vh;
+  --sidebar-width: 25%;
+  --item-height: 50px;
+  --circle-size: 40px;
+  --border-radius: 8px;
+  --scrollbar-width: 10px;
+  
+  /* Fonts */
+  --font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  --font-size-label: 18px;
+  --font-size-input: 16px;
+  --font-size-circle: 14px;
+  --font-weight-bold: bold;
+}
+
+* {
+  font-family: var(--font-family);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--primary-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.main-content {
+  display: flex;
+  width: var(--main-width);
+  height: var(--main-height);
+  background-color: var(--main-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+}
+
+.sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-color-white);
+}
+
+.input-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.input-section label {
+  font-size: var(--font-size-label);
+  margin-bottom: 10px;
+}
+
+#quantity {
+  width: 100px;
+  padding: 8px;
+  font-size: var(--font-size-input);
+  text-align: center;
+  border-radius: 5px;
+  border: var(--text-color-white);
+}
+
+.item-section {
+  width: auto;
+  padding: 20px;
+  overflow-y: auto;
+  height: 65vh;
+}
+
+.item-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.item-label {
+  text-align: center;
+  width: auto;
+  padding: 20px;
+}
+
+.item-section-content {
+  width: 100%;
+}
+
+.item {
+  background-color: var(--item-bg-color);
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  height: var(--item-height);
+  border-radius: var(--border-radius);
+  color: var(--text-color-white);
+}
+
+.item .circle {
+  background-color: var(--circle-bg-color);
+  color: var(--text-color-white);
+  width: var(--circle-size);
+  height: var(--circle-size);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: var(--font-size-circle);
+  font-weight: var(--font-weight-bold);
+}
+
+::-webkit-scrollbar {
+  width: var(--scrollbar-width);
+  height: var(--scrollbar-width);
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb-color);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover-color);
+}
+
+@media (max-width: 1000px) {
+  .main-content {
+    display: block;
+    width: var(--main-width);
+    height: var(--main-height);
+    background-color: var(--main-bg-color);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+  }
+
+  .sidebar {
+    width: 100%;
+    background-color: var(--sidebar-bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--text-color-white);
+  }
+
+  .item {
+    background-color: var(--item-bg-color);
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    height: var(--item-height);
+    border-radius: var(--border-radius);
+    color: var(--text-color-white);
+  }
+
+  .item-section {
+    width: auto;
+    padding: 20px;
+    height: 50vh;
+    overflow-y: auto;
+  }
+}
