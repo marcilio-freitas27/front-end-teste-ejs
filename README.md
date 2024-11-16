@@ -1,44 +1,36 @@
 # front-end-teste-ejs
 
-Este é um projeto de uma lista dinâmica com **Express** e **EJS**  .
+To access this project on Firebase, click on the application link in the top-right corner of this page.
 
-## Tecnologias Utilizadas
+# Firebase project configuration
 
-- **Node.js**: Ambiente de execução JavaScript no servidor.
-- **Express**: Framework minimalista para Node.js para criação de servidores e rotas.
-- **EJS**: Motor de templates para gerar HTML dinâmico com JavaScript no servidor.
+These steps will appear when a project is created. 
+Only the main steps are listed(see the More Information link)
 
-## Funcionalidades
+1. Install a Firebase CLI
 
-- Informar a quantidade de itens;
-- Exibir a quantidade de itens;
-- Alterar a quantidade de forma dinâmica;
-- Roteamento básico com Express.
-- Renderização de templates dinâmicos usando EJS.
+```bash
+$ npm install -g firebase-tools
+```
 
-## Pré-requisitos
+2. Log in to Google Firebase
 
-Antes de rodar este projeto, é necessário ter o **Node.js** instalado. Se não tiver, você pode fazer o download [aqui](https://nodejs.org/).
-Neste projeto foi usada a versão 20.15.0
+```bash
+$ firebase login
+```
 
-## Instalação
+3. Initialize Firebase configuration and follow the next steps (see the More Information link):
 
-1. **Clone o repositório**:
+```bash
+$ firebase init
+```
 
-   ```bash
-   git clone https://github.com/marcilio-freitas27/front-end-teste-ejs.git
-   cd front-end-teste-ejs
+4. Deploy the application
 
-2. **Instale as dependências**:
+```bash
+$ firebase deploy
+```
 
-    No diretório do projeto, execute o comando abaixo para instalar as dependências do projeto:
+### More information
 
-    ```bash
-    npm install
-
-3. **Rodando o Projeto Localmente**
-
-    Após a instalação, você pode rodar o projeto localmente com o seguinte comando:
-    ```bash
-    npm start
-
+[Firebase Docs](https://firebase.google.com/docs/web/setup?hl=pt-br)
