@@ -1,5 +1,9 @@
 const quantityInput = document.querySelector('#quantity');
 const itemList = document.querySelector('#item-list');
+const firstItem = document.querySelector('#first-item');
+const lastItem = document.querySelector('#last-item');
+firstItem.innerText = `OBJ${0}`;
+lastItem.innerText = `OBJ${0}`;
 
 quantityInput.addEventListener('input', () => {
     const quantity = parseInt(quantityInput.value, 10) || 0;
@@ -16,5 +20,15 @@ quantityInput.addEventListener('input', () => {
 
         item.appendChild(circle);
         itemList.appendChild(item);
+
+        if(quantity > 0){
+            firstItem.innerText = `OBJ${1}`;
+            lastItem.innerText = `OBJ${quantity}`;    
+        }
+    }
+
+    if(quantity < 1){
+        firstItem.innerText = `OBJ${0}`;
+        lastItem.innerText = `OBJ${0}`;
     }
 });
