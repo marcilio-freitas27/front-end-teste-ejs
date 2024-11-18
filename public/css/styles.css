@@ -59,7 +59,7 @@ body {
   width: var(--sidebar-width);
   background-color: var(--sidebar-bg-color);
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   color: var(--text-color-white);
 }
@@ -69,6 +69,7 @@ body {
   flex-direction: column;
   align-items: center;
   padding: 20px;
+  margin: auto;
 }
 
 .input-section label {
@@ -106,6 +107,8 @@ body {
 
 .item-section-content {
   width: 100%;
+  display: grid;
+  grid-template-rows: repeat(1, 2fr);
 }
 
 .item {
@@ -158,9 +161,9 @@ body {
   right: 137px;
 }
 
-#first-item-square{
+/* #first-item-square{
   left: 137px;
-}
+} */
 
 ::-webkit-scrollbar {
   width: var(--scrollbar-width);
